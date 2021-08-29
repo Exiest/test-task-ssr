@@ -1,7 +1,7 @@
 import { Post } from 'global/types'
 
 export interface PostsReducerType {
-    items: null | Array<Post>
+    items: Array<Post>
 }
 
 export type PostPayload = {

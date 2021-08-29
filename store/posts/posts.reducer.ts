@@ -2,7 +2,7 @@ import Types, { PostsReducerType } from './posts.types'
 import PostsActionType from './posts.actions'
 
 const initialState: PostsReducerType = {
-    items: null
+    items: []
 }
 
 const managePosts = (state = initialState, action: PostsActionType): PostsReducerType => {

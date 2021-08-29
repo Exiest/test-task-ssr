@@ -400,6 +400,13 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/redux-saga@^0.10.5":
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/@types/redux-saga/-/redux-saga-0.10.5.tgz#80bf21078379ebc97387dbe56e44467b5677fa85"
+  integrity sha1-gL8hB4N568lzh9vlbkRGe1Z3+oU=
+  dependencies:
+    redux-saga "*"
+
 "@types/scheduler@*":
   version "0.16.2"
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
@@ -2917,7 +2924,7 @@ readdirp@~3.5.0:
   dependencies:
     picomatch "^2.2.1"
 
-redux-saga@^1.1.3:
+redux-saga@*, redux-saga@^1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-1.1.3.tgz#9f3e6aebd3c994bbc0f6901a625f9a42b51d1112"
   integrity sha512-RkSn/z0mwaSa5/xH/hQLo8gNf4tlvT18qXDNvedihLcfzh+jMchDgaariQoehCpgRltEm4zHKJyINEz6aqswTw==
