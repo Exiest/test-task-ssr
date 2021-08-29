@@ -1,10 +1,7 @@
 import {
     Formik,
     FormikHelpers,
-    FormikProps,
     ErrorMessage,
-    Field,
-    FieldProps,
 } from 'formik';
 import Input from './components/FormInput'
 import TextArea from './components/FormTextArea'
@@ -28,16 +25,11 @@ const PostForm = () => {
     return (
         <Formik
             initialValues={initialValues}
-            onSubmit={async (values, actions) => {
-                try {
-                    let { error, ...rest } = values
-                    let resp = await PostAPI.createPost(rest)
-                    dispatch(PostsActions.addNewPost(resp))
-                    router.push('/')
-                } catch(err) {
-                    actions.setErrors({ error: "Error while creating post" })
-                }
-                actions.setSubmitting(false);
+            onSubmit={async (values: PostFormValues) => {
+                let { error, ...rest } = values
+                let resp = await PostAPI.createPost(rest)
+                dispatch(PostsActions.addNewPost(resp))
+                router.push('/')
             }}
         >
             <StyledForm>
