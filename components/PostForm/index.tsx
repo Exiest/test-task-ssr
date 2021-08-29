@@ -35,7 +35,7 @@ const PostForm = () => {
                     dispatch(PostsActions.addNewPost(resp))
                     router.push('/')
                 } catch(err) {
-                    actions.setErrors({ error: err })
+                    actions.setErrors({ error: "Error while creating post" })
                 }
                 actions.setSubmitting(false);
             }}
